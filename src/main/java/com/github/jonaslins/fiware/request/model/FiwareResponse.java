@@ -13,4 +13,19 @@ public class FiwareResponse {
     @SerializedName("errorCode")
     private ErrorCode errorCode;
 
+    public List<ContextResponse> getContextResponses() {
+        return contextResponses;
+    }
+
+    public void setContextResponses(List<ContextResponse> contextResponses) {
+        this.contextResponses = contextResponses;
+    }
+
+    public ErrorCode getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(ErrorCode errorCode) {
+        this.errorCode = errorCode;
+    }
 }

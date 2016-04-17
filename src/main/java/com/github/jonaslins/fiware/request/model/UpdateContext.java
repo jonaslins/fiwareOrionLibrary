@@ -12,10 +12,9 @@ import java.util.List;
 public class UpdateContext {
 
     @SerializedName("contextElements")
-    @Expose
     private List<ContextElement> contextElements = new ArrayList<ContextElement>();
+
     @SerializedName("updateAction")
-    @Expose
     private UpdateAction updateAction;
 
     public List<ContextElement> getContextElements() {
