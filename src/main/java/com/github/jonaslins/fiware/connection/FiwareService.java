@@ -13,9 +13,9 @@ import retrofit2.http.POST;
  */
 public interface FiwareService {
 
-    @POST("v1/queryContext")
+    @POST("/v1/queryContext")
     Call<FiwareResponse> queryContext(@Body QueryContext body);
 
-    @POST("v1/updateContext")
+    @POST("/v1/updateContext")
     Call<FiwareResponse> updateContext(@Body UpdateContext body);
 }

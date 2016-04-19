@@ -1,4 +1,13 @@
 apply plugin: 'java'
+Properties props = new Properties()
+props.load(new FileInputStream("local.properties"))
+props.each { prop ->
+  project.ext.set(prop.key, prop.value)
+}
+
+repositories {
+    jcenter()
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -8,3 +17,5 @@ dependencies {
         exclude module: 'retrofit'
     }
 }
+
+apply from: 'maven_push.gradle'
