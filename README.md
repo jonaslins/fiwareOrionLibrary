@@ -13,7 +13,11 @@ dependencies {
 ```
 As there's no release version yet, add a **SNAPSHOT** repository to your `build.gradle`:
 ```gradle
-repositories.maven.url "https://oss.sonatype.org/content/repositories/snapshots/"
+repositories{
+    maven{
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
 ```
 
 ### Basic Example
